@@ -2,6 +2,7 @@ import React from 'react'
 import Time from './Time'
 import Quotes from './Quotes'
 import Greeting from './Greeting'
+import styles from '.././public/index.css'
 
 const Landing = () => {
   return (
