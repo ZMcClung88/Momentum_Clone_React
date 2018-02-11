@@ -1,9 +1,13 @@
 import React from 'react'
 
+import utils from '.././utils/helpers'
+
+var randomQuote = utils.randomQuote()
+
 const Quotes = () => {
   return (
     <div className='quotes-main'>
-      <p>"If it ain't fun, don't do it!"</p>
+      <p> { randomQuote } </p>
     </div>
   )
 }
