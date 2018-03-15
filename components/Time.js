@@ -3,7 +3,7 @@ import React from 'react';
 const Time = () => {
   return (
     <div className="time-main">
-      <p>11:11am</p>
+      <p>11:11pm</p>
     </div>
   );
 };
