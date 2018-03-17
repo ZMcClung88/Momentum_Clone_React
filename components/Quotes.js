@@ -1,14 +1,30 @@
-import React from 'react'
+import React from 'react';
 
-import utils from '.././utils/helpers'
+let allQuotes = [
+  { author: 'H. Jackson Brown, Jr.', quote: 'The best preparation for tomorrow is doing your best today.' },
+  {
+    author: 'Francis of Assisi',
+    quote: "Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible."
+  },
+  { author: 'Norman Vincent Peale', quote: 'Change your thoughts and you change your world.' },
+  { author: 'Aesop', quote: 'No act of kindness, no matter how small, is ever wasted.' },
+  { author: 'Milton Berle', quote: "If opportunity doesnt't knock, build a door." },
+  { author: 'Theodore Roosevelt', quote: "Belive you can and you're half way there." },
+  {
+    author: 'Democritus',
+    quote: 'Happiness resides not in possessions, and not in gold, happiness dwells in the soul.'
+  },
+  { author: 'Tony Robbins', quote: 'We can change our lives. We can do, have, and be exactly what we wish.' },
+  { author: 'Theodore Roethke', quote: 'What we need is more people who specialize in the impossible.' },
+  { author: 'Wayne Gretzky', quote: 'You miss 100 percent of the shots you never take.' }
+];
 
-var randomQuote = utils.randomQuote()
+let randomQuote = () => {
+  console.log('random', allQuotes[3]);
+  return allQuotes[3];
+};
 
-const Quotes = () => {
-  return (
-    <div className='quotes-main'>
-      <p> { randomQuote } </p>
-    </div>
-  )
-}
-export default Quotes
+const Quotes = randomQuote => {
+  return <p>!!!quotes!!!</p>;
+};
+export default Quotes;

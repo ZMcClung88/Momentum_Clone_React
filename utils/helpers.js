@@ -42,7 +42,6 @@ const randomBackgroundImage = () => {
   console.log('working!!!!!!');
 };
 
-module.exports.randomQuote = () => {
-  let randomIndex = Math.floor(Math.random() * quotes.length);
-  console.log(quotes);
+module.exports.allQuotes = () => {
+  return quotes;
 };
