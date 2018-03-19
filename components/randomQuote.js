@@ -19,12 +19,31 @@ let allQuotes = [
   { author: 'Wayne Gretzky', quote: 'You miss 100 percent of the shots you never take.' }
 ];
 
-let randomQuote = () => {
-  console.log('random', allQuotes[3]);
-  return allQuotes[3];
-};
+function MixUp() {
+  console.log('mixUp', allQuotes);
+  let r = allQuotes[Math.floor(Math.random() * allQuotes.length)];
+  // console.log(r.author);
 
-const Quotes = randomQuote => {
-  return <p>!!!quotes!!!</p>;
-};
-export default Quotes;
+  return (
+    <h1>
+      <p>
+        "{r.quote}"
+      </p>
+      <p>
+        -{r.author}
+      </p>
+    </h1>
+  );
+}
+
+class RandomQuote extends React.Component {
+  render() {
+    return (
+      <div>
+        <MixUp />
+      </div>
+    );
+  }
+}
+
+export default RandomQuote;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Quotes from './Quotes';
+import RandomQuote from './RandomQuote';
 import Greeting from './Greeting';
 import styles from '.././public/index.css';
 import Weather from './Weather';
@@ -16,7 +16,7 @@ const Landing = () => {
       <p>Welcome to my world</p>
       <Clock format={'HH:mm A'} />
       <Greeting />
-      <Quotes />
+      <RandomQuote />
     </div>
   );
 };
