@@ -20,7 +20,7 @@ let allQuotes = [
 ];
 
 function MixUp() {
-  console.log('mixUp', allQuotes);
+  // console.log('mixUp', allQuotes);
   let r = allQuotes[Math.floor(Math.random() * allQuotes.length)];
   // console.log(r.author);
 
@@ -39,9 +39,9 @@ function MixUp() {
 class RandomQuote extends React.Component {
   render() {
     return (
-      <div>
+      <section>
         <MixUp />
-      </div>
+      </section>
     );
   }
 }

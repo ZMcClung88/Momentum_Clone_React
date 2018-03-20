@@ -12,8 +12,6 @@ const Landing = () => {
   return (
     <div className="landing-main">
       <Weather />
-      <h1>Hello World</h1>
-      <p>Welcome to my world</p>
       <Clock format={'HH:mm A'} />
       <Greeting />
       <RandomQuote />
