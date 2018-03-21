@@ -9,6 +9,7 @@ class Greeting extends React.Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   handleChange(event) {
@@ -21,12 +22,24 @@ class Greeting extends React.Component {
       };
     });
   }
+  handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      console.log('do validate');
+    }
+  }
 
   render() {
     return (
       <div className="greeting-main">
         <h1>What is your name?</h1>
-        <input id="username" type="text" value={this.state.username} autoComplete="off" onChange={this.handleChange} />
+        <input
+          id="username"
+          type="text"
+          value={this.state.username}
+          autoComplete="off"
+          onChange={this.handleChange}
+          onKeyPress={this.handleKeyPress}
+        />
       </div>
     );
   }

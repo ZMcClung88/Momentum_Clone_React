@@ -1,4 +1,10 @@
 body {
   background: url('/images/33963984465_6a9dcd84a3_k.jpg') no-repeat center center fixed;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  height: 100vh;
+  text-align: center;
 }
