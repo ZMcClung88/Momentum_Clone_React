@@ -8,26 +8,32 @@ import Clock from 'react-live-clock';
 // var randomQuote = utils.randomQuote
 // var randomImage = utils.randomImage
 
-const RandomImage = () => {
-  let images = [
-    '33963984465_6a9dcd84a3_k.jpg',
-    'ales-krivec-2892.jpg',
-    'jason-ortego-5386.jpg',
-    'jon-flobrant-32821.jpg',
-    'luca-zanon-26595.jpg',
-    'luis-poletti-17300.jpg',
-    'luke-pamer-7319.jpg',
-    'milos-simic-351441.jpg',
-    'regis-freyd-275512.jpg',
-    'robert-crawford-12905.jpg',
-    'sam-ferrara-270946.jpg'
-  ];
+let images = [
+  { url: '/images/33963984465_6a9dcd84a3_k.jpg' },
+  { url: '/images/ales-krivec-2892.jpg' },
+  { url: '/images/jason-ortego-5386.jpg' },
+  { url: '/images/jon-flobrant-32821.jpg' },
+  { url: '/images/luca-zanon-26595.jpg' },
+  { url: '/images/luis-poletti-17300.jpg' },
+  { url: '/images/luke-pamer-7319.jpg' },
+  { url: '/images/milos-simic-351441.jpg' },
+  { url: '/images/regis-freyd-275512.jpg' },
+  { url: '/images/robert-crawford-12905.jpg' },
+  { url: '/images/sam-ferrara-270946.jpg' }
+];
+
+// console.log(images[Math.floor(Math.random() * images.length)].url);
+var BgImage = {
+  backgroundImage: 'url(' + images[Math.floor(Math.random() * images.length)].url + ')',
+  height: '100%',
+  width: '100%',
+  backgroundSize: 'cover'
 };
 
 class Landing extends React.Component {
   render() {
     return (
-      <div className="landing-main">
+      <div className="landing-main" style={BgImage}>
         <Weather />
         <Clock format={'HH:mm A'} />
         <Greeting />
