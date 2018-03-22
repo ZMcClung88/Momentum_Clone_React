@@ -1,6 +1,6 @@
 import React from 'react';
 import RandomQuote from './RandomQuote';
-import Greeting from './Greeting';
+import GetNameGreet from './GetNameGreet';
 import styles from '.././public/index.css';
 import Weather from './Weather';
 import Clock from 'react-live-clock';
@@ -36,7 +36,7 @@ class Landing extends React.Component {
       <div className="landing-main" style={BgImage}>
         <Weather />
         <Clock format={'HH:mm A'} className="clock" />
-        <Greeting />
+        <GetNameGreet />
         <RandomQuote />
       </div>
     );
