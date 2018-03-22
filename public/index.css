@@ -17,11 +17,17 @@ body {
 
 .weather-main {
   font-size: 35px;
+  display: flex;
+  margin-bottom: 18%;
   /* border: 1px solid yellow; */
 }
 
 .clock {
-  font-size: 60px;
+  font-size: 100px;
+}
+
+.greeting-main {
+  /* margin-top: 15%; */
 }
 
 .landing-main {
