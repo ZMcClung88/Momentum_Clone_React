@@ -1,5 +1,11 @@
 import React from 'react';
 
+class Aloha extends React.Component {
+  render() {
+    return <h1>Welcome, Zac</h1>;
+  }
+}
+
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
@@ -40,6 +46,7 @@ class Greeting extends React.Component {
           onChange={this.handleChange}
           onKeyPress={this.handleKeyPress}
         />
+        <Aloha />
       </div>
     );
   }
