@@ -13,37 +13,52 @@ body {
   height: 100vh;
   width: 100vw;
   display: flex;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .weather-main {
   font-size: 35px;
   display: flex;
-  margin-bottom: 18%;
-  border: 1px solid yellow;
+  margin-top: -7%;
+  margin-left: 2%;
+  /* border: 1px solid yellow; */
 }
 
 .clock {
-  font-size: 100px;
+  font-size: 125px;
 }
 
 .greeting-main {
-  /* margin-top: 15%; */
+  margin-top: -16.5%;
+  font-size: 20px;
 }
 
 .landing-main {
-  border: 3px solid limegreen;
+  /* border: 3px solid limegreen; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  /* align-items: center; */
+}
+
+#username {
+  height: 35px;
+  width: 350px;
+  margin-top: 1%;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
 }
 
 .quote-section {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-self: flex-end;
+  font-size: 25px;
 }
 
 /*///////// fixes white border around page \\\\\\\\\\
