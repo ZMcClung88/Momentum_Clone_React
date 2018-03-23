@@ -26,10 +26,10 @@ function MixUp() {
 
   return (
     <h1>
-      <p>
+      <p id="quote">
         "{r.quote}"
       </p>
-      <p>
+      <p id="author">
         -{r.author}
       </p>
     </h1>

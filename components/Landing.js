@@ -35,7 +35,7 @@ class Landing extends React.Component {
     return (
       <div className="landing-main" style={BgImage}>
         <Weather />
-        <Clock format={'HH:mm A'} className="clock" />
+        <Clock format={'HH:mm'} className="clock" />
         <GetNameGreet />
         <RandomQuote />
       </div>
