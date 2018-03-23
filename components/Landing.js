@@ -37,7 +37,7 @@ class Landing extends React.Component {
         <Weather />
         <Clock format={'HH:mm'} className="clock" />
         <GetNameGreet />
-        <RandomQuote />
+        <RandomQuote className="quote-section" />
       </div>
     );
   }

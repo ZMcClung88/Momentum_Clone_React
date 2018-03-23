@@ -1,54 +1,63 @@
 import React from 'react';
 
-class GetName extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      username: ''
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    var value = event.target.value;
-    console.log('username value', value);
-
-    this.setState(function() {
-      return {
-        username: value
-      };
-    });
-  }
-
-  render() {
-    return (
-      <form>
-        <h1>What is your name?</h1>
-        <input id="username" type="text" value={this.state.username} autoComplete="off" onChange={this.handleChange} />
-      </form>
-    );
-  }
-}
-
 class Greeting extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      username: ''
+      username: '',
+      hideGreeting: true
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
-  handleSubmit(username) {
-    console.log(username);
+  handleChange(event) {
+    let username = event.target.value;
+    console.log('username', username);
+
+    this.setState(function() {
+      return {
+        username: username
+      };
+    });
   }
+  handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      console.log('do validate');
+      this.setState({
+        hideGreeting: false
+      });
+    }
+  }
+
   render() {
     return (
-      <div>
-        <GetName onSubmit={this.handleSubmit} />
+      <div className="greeting-main">
+        <div id="getName">
+          <h1>What is your name?</h1>
+          <input
+            id="username"
+            type="text"
+            value={this.state.username}
+            autoComplete="off"
+            onChange={this.handleChange}
+            onKeyPress={this.handleKeyPress}
+          />
+        </div>
+        {this.state.hideGreeting ? null : <Aloha username={this.state.username} />}
       </div>
+    );
+  }
+}
+
+class Aloha extends React.Component {
+  render() {
+    return (
+      <h1>
+        Welcome, {this.props.username}!
+      </h1>
     );
   }
 }

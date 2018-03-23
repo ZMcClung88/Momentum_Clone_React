@@ -25,7 +25,7 @@ function MixUp() {
   // console.log(r.author);
 
   return (
-    <h1>
+    <h1 className="quote-section">
       <p id="quote">
         "{r.quote}"
       </p>

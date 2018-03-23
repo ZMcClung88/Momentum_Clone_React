@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   height: 100vh;
   text-align: center;
 }
@@ -20,7 +20,7 @@ body {
   font-size: 35px;
   display: flex;
   margin-bottom: 18%;
-  /* border: 1px solid yellow; */
+  border: 1px solid yellow;
 }
 
 .clock {
@@ -32,7 +32,18 @@ body {
 }
 
 .landing-main {
-  /* border: 3px solid limegreen; */
+  border: 3px solid limegreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.quote-section {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: flex-end;
 }
 
 /*///////// fixes white border around page \\\\\\\\\\
